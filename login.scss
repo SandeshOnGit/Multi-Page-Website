@@ -1,0 +1,187 @@
+$display_flex:flex;
+$primary-color:white;
+$secondary-color:#F28123;
+$font1:'Open Sans';
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+body{
+    font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+.hero{
+    background: url(/img/breadcrumb-bg.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.hero::before{
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0,0.5);
+}
+.hero *{
+    z-index: 20;
+}
+
+.hero .navbar{
+    display: $display_flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    text-align: center;
+}
+.hero .navbar img{
+    height: 50px;
+}
+.hero .navbar ul{
+    display: $display_flex;
+    gap: 40px;
+}
+
+.hero .navbar ul li{
+    list-style: none;
+
+}
+.hero .navbar ul li a{
+    text-decoration: none;
+    font-family: $font1;
+    font-weight: bold;
+    color: $primary-color;
+    font-size:16px;
+}
+
+.hero .navbar .icon{
+    display: $display_flex;
+    gap:30px;
+    font-size: 16px;
+}
+.hero .navbar .icon a{
+    color:$primary-color;
+}
+
+.hero .navbar a:hover{
+    color:$secondary-color;
+}
+
+// Navbar Label
+.hero .navbar label {
+    color:$primary-color;
+    margin-right: 40px;
+    display: none;
+  }
+  #click {
+    display: none;
+  }
+
+
+  
+.hero .main{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    padding-top: 30px;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero .main p{
+    color: $secondary-color;
+    font-family: $font1;
+    font-size: 18px;
+    font-weight:bold;
+    letter-spacing:8px;
+    padding-bottom: 22px;
+    
+}
+
+.hero .main h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+    color:$primary-color;
+}
+
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:40px 0px;
+    
+}
+
+.login div{
+    padding:50px;
+    background-color:#012738;
+    border:transparent;
+    border-radius:10px;
+
+    form{
+        i{
+            color:$primary-color;
+        }
+    }
+}
+
+.login div img{
+    margin-bottom: 30px;
+}
+
+.login div input{
+    border: transparent;
+    padding:10px 5px;
+    margin:10px;
+    border-radius: 3px;
+}
+
+.login div a{
+    color:$primary-color;
+    text-decoration: none;
+}
+
+.login div a:hover{
+    color: $secondary-color;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    .hero{
+        height: 110vh;
+    }
+    .hero .navbar label {
+      display: block;
+    }
+    .hero .navbar ul {
+      flex-direction: column;
+      position: absolute;
+      top: 90px;
+      background-color: #051922;
+      width: 100%;
+      display: none;
+      z-index: 21;
+    }
+    .hero .navbar ul li {
+      padding: 10px;
+    }
+    .hero .navbar ul li a {
+      color: white;
+    }
+    #click:checked ~.hero .navbar ul{
+      display: block;
+    }
+  }

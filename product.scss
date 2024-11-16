@@ -1,0 +1,365 @@
+$display_flex:flex;
+$primary-color:white;
+$secondary-color:#F28123;
+$font1:'Open Sans';
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+body{
+    font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+.hero{
+    background: url(/img/latest-news/news-bg-1.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 50vh;
+    position: relative;
+}
+.hero::before{
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0,0.5);
+}
+.hero *{
+    z-index: 20;
+}
+
+.hero .navbar{
+    display: $display_flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    text-align: center;
+}
+.hero .navbar img{
+    height: 50px;
+}
+.hero .navbar ul{
+    display: $display_flex;
+    gap: 40px;
+}
+
+.hero .navbar ul li{
+    list-style: none;
+
+}
+.hero .navbar ul li a{
+    text-decoration: none;
+    font-family: $font1;
+    font-weight: bold;
+    color: $primary-color;
+    font-size:16px;
+}
+
+.hero .navbar .icon{
+    display: $display_flex;
+    gap:30px;
+    font-size: 16px;
+}
+.hero .navbar .icon a{
+    color:$primary-color;
+}
+
+.hero .navbar a:hover{
+    color:$secondary-color;
+}
+
+// Navbar Label
+.hero .navbar label {
+    color:$primary-color;
+    margin-right: 40px;
+    display: none;
+  }
+  #click {
+    display: none;
+  }
+
+  
+.hero .main{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    padding-top: 40px;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero .main p{
+    color: $secondary-color;
+    font-family: $font1;
+    font-size: 18px;
+    font-weight:bold;
+    letter-spacing:8px;
+    padding-bottom: 22px;
+    
+}
+
+.hero .main h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+    color:$primary-color;
+}
+
+.products{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:100px 0px;
+    text-align: center;
+}
+
+
+.products .button a{
+    text-decoration: none;
+    padding:12px 20px;
+    text-align: center;
+    font-size: 20px;
+    color:black;
+    font-weight: bold;
+    border:2px solid black;
+    border-radius: 25px;
+    margin:20px;
+
+
+}
+.products .button a:hover{
+    background-color: $secondary-color;
+    border:2px solid $secondary-color;
+    color:$primary-color;
+}
+.products .prod{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding-top:60px;
+    gap:60px;
+}
+
+.products .prod .fruit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    border: transparent;
+    border-radius: 8px;
+
+}
+.products .prod .fruit:hover{
+    box-shadow: none;
+}
+.products .prod .fruit img{
+    width:300px;
+    height:281px ;
+    padding:30px 30px 0px;
+}
+.products .prod .fruit p{
+    padding:7px 0px;
+}
+.products .prod .fruit h2{
+    font-size: 30px;
+}
+.products .prod .fruit .btn{
+    margin:25px 0px 35px 0px;
+
+    background-color: $secondary-color;
+    color:$primary-color;
+    font-size: 16px;
+    padding:12px 22px;
+    border:transparent;
+    border-radius: 25px;
+    text-decoration: none;
+    
+
+}
+
+.products .prod .fruit .btn:hover{
+    color:$secondary-color;
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+.customer{
+    width: 100%;
+    display:flex ;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: #f5f5f5;
+    padding:60px 0px;
+}
+
+footer{
+    width:100%;
+    background-color:#051922 ;
+}
+
+footer .foot{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    
+    padding:90px 0px;
+    gap:50px;
+    color:$primary-color;
+}
+footer .foot .ft{
+    max-width: 25%;
+}
+
+footer .foot .ft h2{
+    font-size: 28px;
+    font-weight: 400;
+    padding-bottom:25px;
+}
+
+footer .foot .ft p{
+    font-size: 14px;
+    font-family: $font1;
+    line-height: 1.9;
+    font-weight: 400;
+    opacity: 0.6;
+
+}
+
+footer .foot .ft3 ul li{
+    list-style: none;
+    padding:5px 0px;
+}
+footer .foot .ft3 ul li::before{
+    content: "> ";
+    color:$secondary-color;
+    font-size: 15px;
+}
+footer .foot .ft3 ul li a{
+    color:$primary-color;
+    opacity: 0.6;
+    font-weight: 400;
+    text-decoration: none;
+}
+footer .foot .ft3 ul li a:hover{
+    color: $secondary-color;
+}
+
+footer .foot .ft4 form{
+    margin:20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+footer .foot .ft4 form input{
+    background-color: #012738;
+    border: transparent;
+    color:$primary-color;
+    padding:15px;
+    font-size: 14px;
+    
+}
+footer .foot .ft4 form a{
+    background-color: #012738;
+    border: transparent;
+    padding:10px 15px;
+    font-size: 18px;
+    color:$secondary-color;
+}
+
+footer .foot .ft4 form a:hover{
+    background-color: $secondary-color;
+    color:#012738;
+}
+
+footer .copyright{
+    display: flex;
+    padding:30px 0px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer .copyright p{
+    color:$primary-color;
+}
+footer .copyright p span{
+    color:$secondary-color;
+}
+
+footer .copyright .icons a{
+    color: $primary-color;
+    padding:0px 3px;
+    font-size: 15px;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .hero .navbar label {
+      display: block;
+    }
+    .hero .navbar ul {
+      flex-direction: column;
+      position: absolute;
+      top: 90px;
+      background-color: #051922;
+      width: 100%;
+      display: none;
+      z-index: 21;
+    }
+    .hero .navbar ul li {
+      padding: 10px;
+    }
+    .hero .navbar ul li a {
+      color: white;
+    }
+    #click:checked ~.hero .navbar ul{
+      display: block;
+    }
+
+
+    .products .prod{
+        
+        grid-template-columns: repeat(2,1fr);
+    }
+  }
+
+@media screen and (max-width:426px) {
+    
+    .products .prod{
+        
+        grid-template-columns: 1fr;
+    }
+
+    .products .button{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+
+        a{
+            padding:10px 15px;
+        }
+    }
+
+    footer .copyright{
+        flex-direction: column;
+        text-align: center;
+      }
+}
